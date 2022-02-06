@@ -2,6 +2,8 @@ package com.example.recyclerdelegate
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.recyclerdelegate.model.Shelf
+import com.example.recyclerdelegate.model.ShelfType
 
 class DelegatedAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 

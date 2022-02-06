@@ -1,4 +1,4 @@
-package com.example.recyclerdelegate
+package com.example.recyclerdelegate.model
 
 enum class ShelfType {
     BANNER,
