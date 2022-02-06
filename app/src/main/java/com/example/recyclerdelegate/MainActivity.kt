@@ -1,10 +1,14 @@
 package com.example.recyclerdelegate
 
 import android.os.Bundle
+import android.util.Log
+import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.recyclerdelegate.adapters.ViewTrackingInfo
+import com.example.recyclerdelegate.adapters.VisibilityTracker
 import com.example.recyclerdelegate.adapters.VitrinaAdapter
 
 class MainActivity : AppCompatActivity() {
@@ -13,7 +17,8 @@ class MainActivity : AppCompatActivity() {
 
     private val adapter by lazy {
         VitrinaAdapter(
-            viewModel.scrollStates
+            viewModel.scrollStates,
+            viewModel.visibilityTracker
         )
     }
 

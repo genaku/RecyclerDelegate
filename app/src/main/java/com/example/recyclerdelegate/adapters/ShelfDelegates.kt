@@ -21,7 +21,7 @@ fun shelfAdapterDelegate(
         )
     }
 ) {
-    val adapter = ShelfItemsAdapter()
+    val adapter = ShelfItemsAdapter(visibilityTracker)
     binding.rvShelf.adapter = adapter
     binding.rvShelf.layoutManager = LinearLayoutManager(context).apply {
         orientation = LinearLayoutManager.HORIZONTAL
