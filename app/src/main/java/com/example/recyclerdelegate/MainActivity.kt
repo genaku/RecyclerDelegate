@@ -1,15 +1,11 @@
 package com.example.recyclerdelegate
 
 import android.os.Bundle
-import android.os.Parcelable
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.recyclerdelegate.model.Shelf
-import com.example.recyclerdelegate.model.ShelfType
-import com.example.recyclerdelegate.model.Vod
-import com.hannesdorfmann.adapterdelegates4.ListDelegationAdapter
+import com.example.recyclerdelegate.adapters.VitrinaAdapter
 
 class MainActivity : AppCompatActivity() {
 

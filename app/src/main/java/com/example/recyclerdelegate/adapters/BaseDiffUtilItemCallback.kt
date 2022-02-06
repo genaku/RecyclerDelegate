@@ -1,4 +1,4 @@
-package com.example.recyclerdelegate
+package com.example.recyclerdelegate.adapters
 
 import androidx.recyclerview.widget.DiffUtil
 import com.example.recyclerdelegate.model.VitrinaItem

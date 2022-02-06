@@ -1,4 +1,4 @@
-package com.example.recyclerdelegate
+package com.example.recyclerdelegate.adapters
 
 import com.example.recyclerdelegate.model.VitrinaItem
 import com.hannesdorfmann.adapterdelegates4.AsyncListDifferDelegationAdapter

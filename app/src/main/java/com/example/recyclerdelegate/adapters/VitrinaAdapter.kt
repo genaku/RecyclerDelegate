@@ -1,4 +1,4 @@
-package com.example.recyclerdelegate
+package com.example.recyclerdelegate.adapters
 
 import android.os.Parcelable
 import com.example.recyclerdelegate.model.VitrinaItem

@@ -1,4 +1,4 @@
-package com.example.recyclerdelegate
+package com.example.recyclerdelegate.adapters
 
 import android.util.Log
 import com.example.recyclerdelegate.databinding.BoxItemBinding
