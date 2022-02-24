@@ -6,18 +6,9 @@ import android.view.View
 import androidx.lifecycle.ViewModel
 import com.example.recyclerdelegate.adapters.ViewTrackingInfo
 import com.example.recyclerdelegate.adapters.VisibilityTracker
-import com.example.recyclerdelegate.model.Shelf
-import com.example.recyclerdelegate.model.ShelfType
-import com.example.recyclerdelegate.model.Vod
+import com.example.recyclerdelegate.model.*
 
 class MainViewModel : ViewModel() {
-
-    private val shelfItems = listOf(
-        Vod(1, "first"),
-        Vod(2, "second"),
-        Vod(3, "third"),
-        Vod(4, "forth")
-    )
 
     val scrollStates: MutableMap<Int, Parcelable> = mutableMapOf()
 
@@ -42,25 +33,34 @@ class MainViewModel : ViewModel() {
             type = ShelfType.VOD,
             shelfId = 0,
             title = "First shelf",
-            items = shelfItems
+            items = getShelfItems(1)
         ),
         Shelf(
             type = ShelfType.VOD,
             shelfId = 1,
             title = "Second shelf",
-            items = shelfItems
+            items = getShelfItems(2)
         ),
         Shelf(
             type = ShelfType.VOD,
             shelfId = 2,
             title = "Third shelf",
-            items = shelfItems
+            items = getShelfItems(3)
         ),
         Shelf(
             type = ShelfType.VOD,
             shelfId = 3,
             title = "Forth shelf",
-            items = shelfItems
+            items = getShelfItems(4)
         )
     )
+
+    private fun getShelfItems(shelfPos: Int): List<SuperShelfItem> {
+        val result = mutableListOf<SuperShelfItem>()
+        for (i in 0..5) {
+            result.add(SquareSuperShelfItemData("sh:$shelfPos item:${2 * i + 1}"))
+            result.add(RectSuperShelfItemData("sh:$shelfPos item:${i * 2 + 2}"))
+        }
+        return result
+    }
 }

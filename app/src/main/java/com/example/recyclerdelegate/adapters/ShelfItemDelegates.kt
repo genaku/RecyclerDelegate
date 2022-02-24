@@ -4,21 +4,21 @@ import android.util.Log
 import android.view.View
 import com.example.recyclerdelegate.databinding.BoxItemBinding
 import com.example.recyclerdelegate.databinding.SquareItemBinding
+import com.example.recyclerdelegate.model.RectSuperShelfItem
+import com.example.recyclerdelegate.model.SquareSuperShelfItem
 import com.example.recyclerdelegate.model.VitrinaItem
-import com.example.recyclerdelegate.model.Vod
 import com.hannesdorfmann.adapterdelegates4.dsl.adapterDelegateViewBinding
 
 fun squareAdapterDelegate(
     visibilityTracker: VisibilityTracker<View>
-) = adapterDelegateViewBinding<Vod, VitrinaItem, SquareItemBinding>(
+) = adapterDelegateViewBinding<SquareSuperShelfItem, VitrinaItem, SquareItemBinding>(
     viewBinding = { layoutInflater, parent ->
         SquareItemBinding.inflate(
             layoutInflater,
             parent,
             false
         )
-    },
-    on = { item, _, _ -> item.vitrinaItemId % 2 == 0L }
+    }
 ) {
     bind {
         Log.d("TAG", "bind item ${item.title}")
@@ -30,17 +30,16 @@ fun squareAdapterDelegate(
     }
 }
 
-fun boxAdapterDelegate(
+fun rectAdapterDelegate(
     visibilityTracker: VisibilityTracker<View>
-) = adapterDelegateViewBinding<Vod, VitrinaItem, BoxItemBinding>(
+) = adapterDelegateViewBinding<RectSuperShelfItem, VitrinaItem, BoxItemBinding>(
     viewBinding = { layoutInflater, parent ->
         BoxItemBinding.inflate(
             layoutInflater,
             parent,
             false
         )
-    },
-    on = { item, _, _ -> item.vitrinaItemId % 2 == 1L }
+    }
 ) {
     bind {
         binding.textView.text = item.title

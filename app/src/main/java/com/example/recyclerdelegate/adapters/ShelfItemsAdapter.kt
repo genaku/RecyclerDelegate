@@ -11,7 +11,7 @@ class ShelfItemsAdapter(
     init {
         delegatesManager
             .addDelegate(squareAdapterDelegate(visibilityTracker))
-            .addDelegate(boxAdapterDelegate(visibilityTracker))
+            .addDelegate(rectAdapterDelegate(visibilityTracker))
     }
 
     override fun getItemId(position: Int): Long {
